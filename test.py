@@ -6,7 +6,7 @@ class Cam(Camera):
     def __init__(self, **kwargs):
         # super().__init__(**kwargs)
         self.play = True
-
+    
 # class lab(Label):
 #     def __init__(self, **kwargs):
 #         super().__init__(**kwargs)

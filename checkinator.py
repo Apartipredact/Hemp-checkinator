@@ -38,21 +38,22 @@ class BarcodeScanner(Image):
              ZBarSymbol.CODE128,
              ZBarSymbol.UPCA])
 
-        
+        #add this to a new function
         for barcode in barcodes:
             x, y, w, h = barcode.rect
             data = barcode.data.decode("utf-8")
 
-            # Draw rectangle
-            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            # # Draw rectangle
+            # cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-            # Draw text
-            cv2.putText(frame, data, (x, y - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.6, (0, 255, 0), 2)
+            # # Draw text
+            # cv2.putText(frame, data, (x, y - 10),
+            #             cv2.FONT_HERSHEY_SIMPLEX,
+            #             0.6, (0, 255, 0), 2)
 
             print("Detected:", data)
 
+#make a request to get ingredients of barcode and display whether hemp or no hemp
 
     def on_stop(self):
         self.capture.release()
